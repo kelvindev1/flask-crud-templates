@@ -1,0 +1,32 @@
+install the packages(flask-migrate, flask-SQLAlchemy)
+configure app to use both flask-SQLAlchemy and flask-migrate
+create our models - database tables / entities (flask-SQLAlchemy)
+migrate - updating the state of our database schema (flask-migrate)
+perform queries based on our models
+
+
+pipenv install && pipenv shell
+pip install Flask
+pip install flask-sqlalchemy
+pip install flask-migrate
+
+
+//create a migration environment
+flask db init
+// commit 
+flask db revision --autogenerate -m "Create Students Table"
+// updates the schema
+flask db upgrade head 
+
+
+// to downgrade a revision you open the revision then look for down_revision = "###" and copy ###.
+// on the terminal run flask db downgrade ###
+
+// you can also check the history by:
+// flask db history
+
+
+(input:t+br*2)*3
+
+// when quering from the browser using such path /student/<int:id>/ all we do is pass student/(id)
+
